@@ -28,9 +28,8 @@ return [
 	|
 	*/
 
-	'host' => '192.168.10.16',
+	'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
 	
-    //'host' => 'mail.medicamentos.gob.sv',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -57,8 +56,8 @@ return [
 	*/
 
 	'from' => [
-        'address' => 'solicitudes.administrativas@medicamentos.gob.sv',
-        'name' => 'Permisos y Licencias (No Responder a esta cuenta)',
+        'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
+        'name' => env('MAIL_FROM_NAME', 'Example'),
     ],
 
 	/*
@@ -85,7 +84,7 @@ return [
 	|
 	*/
 
-	'username' => 'solicitudes.administrativas@medicamentos.gob.sv',
+	'username' => ,
 
 	/*
 	|--------------------------------------------------------------------------
@@ -98,7 +97,7 @@ return [
 	|
 	*/
 
-	'password' => '.2017UI$',
+	'password' => env('MAIL_PASSWORD'),
 
 	/*
 	|--------------------------------------------------------------------------
